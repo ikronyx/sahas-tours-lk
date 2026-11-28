@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import { Search } from "lucide-react";
-import { photos, themes, tours } from "@/lib/content";
+import { themes, tours, tourStopName } from "@/lib/content";
 import { TourCard } from "./editorial";
 
 export default function TourExplorer() {
   const [query, setQuery] = useState("");
   const [theme, setTheme] = useState("All themes");
   const results = tours.filter(tour => {
-    const terms = [tour.name, tour.theme, tour.summary, ...tour.stops.map(stop => photos[stop].name)].join(" ").toLowerCase();
+    const terms = [tour.name, tour.theme, tour.summary, ...tour.stops.map(tourStopName)].join(" ").toLowerCase();
     return (theme === "All themes" || tour.theme === theme) && terms.includes(query.trim().toLowerCase());
   });
 

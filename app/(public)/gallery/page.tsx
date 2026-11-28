@@ -14,6 +14,6 @@ export default function Gallery() {
       <figcaption><Link href={`/destinations/${slug}`}><span>{photos[slug].name}<small>{region}</small></span><ArrowUpRight size={20} aria-hidden="true" /></Link></figcaption>
     </figure>)}</section>
     <section id="photo-credits" className="shell photo-credits"><details><summary>Photography credits</summary>
-      <ul>{photoCredits.map(credit => <li key={credit.url}><a href={credit.url}>{credit.place} by {credit.author}</a>{credit.commons ? <> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · resized and converted to WebP</> : " · Unsplash"}</li>)}</ul>
+      <ul>{photoCredits.map(credit => <li key={credit.url}><a href={credit.url}>{credit.place} by {credit.author}</a>{credit.license ? <> · <a href={credit.license.url}>{credit.license.name}</a> · resized and converted to WebP</> : " · Unsplash"}</li>)}</ul>
     </details></section><EnquiryBand /></>;
 }

@@ -31,7 +31,7 @@ Inter Variable is used for reading and controls. Source Serif 4 Variable is used
 
 Place your MP4 at `public/bg-video.mp4` before starting the dev server or deploying. The homepage requests it as `/bg-video.mp4`. A short, compressed H.264 MP4 works well for this background.
 
-The video plays muted and loops inline. Use **Play video** if autoplay is blocked. Visitors with reduced motion can choose **Play video**. The hero uses a solid dark color while the video loads or if it cannot play.
+The video attempts muted autoplay and loops inline. A single translucent theme color covers the footage. The hero stays dark until the first frame is available, and can show that frame when autoplay is blocked.
 
 To check the file locally, open `http://localhost:3000/bg-video.mp4` (use your dev server's port). If you get a 404, check that the file is in the same project's `public` folder and that the full filename is exactly `bg-video.mp4`. Restart the server after adding the file if the URL still returns 404. If the URL loads but the browser cannot play it, export as H.264 MP4 with a broadly compatible pixel format such as yuv420p. For a deployed site, include the file in the deployment and check the same path on your domain.
 
