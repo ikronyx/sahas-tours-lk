@@ -51,14 +51,14 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="shell hero-bottom">
+        {/*<div className="shell hero-bottom">
           <a href="#welcome">
             <ArrowDown size={17} aria-hidden="true" /> Discover the island
           </a>
           <Link href="/destinations/sigiriya">
             <MapPin size={17} aria-hidden="true" /> Explore Sigiriya
           </Link>
-        </div>
+        </div>*/}
       </section>
       <section className="home-welcome shell section" id="welcome">
         <div className="welcome-photo" data-motion-reveal>
